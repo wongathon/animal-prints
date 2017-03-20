@@ -1,13 +1,11 @@
 var defaultAnimals = ["cat", "dog", "monkey"];
 var animalsArray = JSON.parse(localStorage.getItem("animalia"));
 
-$("#clearIt").on("click", resetIt);
-
-function resetIt(event){
+$("#clearIt").on("click", function (event){
   animalsArray = defaultAnimals;
   localStorage.setItem("animalia", JSON.stringify(animalsArray));
   displayButtons();
-};
+});
 
 //add animal to array
 $("#add-animal").on("click", function(event){
